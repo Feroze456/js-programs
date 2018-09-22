@@ -1,0 +1,30 @@
+<html>
+<div style="width: 100px;
+            height: 100px; 
+            background: yellow;
+            cursor: wait">
+
+A mouse over this yellow patch will show you the wait cursor.
+
+</div>
+</html>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<script type="text/javascript">
+    function clickDiv() {
+        document.getElementById("test").style.cursor = "wait";
+        setTimeout('document.getElementById("test").style.cursor = "wait"', 1000);
+    }
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="test" style="width:100%; height:100%;background-color:Gray;position:absolute" onclick="clickDiv()">
+    
+    </div>
+    </form>
+</body>
+</html>
